@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Roadshow</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-text">AI</span>
+                <span class="logo-text-secondary">Roadshow</span>
+            </a>
+            <div class="nav-links">
+                <a href="#live-streams" class="nav-link">
+                    <i class="fas fa-broadcast-tower"></i>
+                    <span>Live Stream</span>
+                </a>
+                <a href="#videos" class="nav-link">
+                    <i class="fas fa-play-circle"></i>
+                    <span>Must Watch</span>
+                </a>
+                <a href="#sponsors" class="nav-link">
+                    <i class="fas fa-handshake"></i>
+                    <span>Partners</span>
+                </a>
+                <a href="#about-us" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>About Me</span>
+                </a>
+                <button class="nav-cta discord-btn">
+                    <i class="fab fa-discord"></i>
+                    <span>Join Discord</span>
+                </button>
+            </div>
+            <button class="hamburger" id="hamburger-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <a href="#" class="mobile-logo">
+                <span class="logo-text">AI</span>
+                <span class="logo-text-secondary">Roadshow</span>
+            </a>
+            <button class="close-menu" id="close-menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="mobile-links">
+            <a href="#live-streams" class="mobile-link">
+                <i class="fas fa-broadcast-tower"></i>
+                <span>Live Stream</span>
+            </a>
+            <a href="#videos" class="mobile-link">
+                <i class="fas fa-play-circle"></i>
+                <span>Must Watch</span>
+            </a>
+            <a href="#sponsors" class="mobile-link">
+                <i class="fas fa-handshake"></i>
+                <span>Sponsors</span>
+            </a>
+            <a href="#about-us" class="mobile-link">
+                <i class="fas fa-user"></i>
+                <span>About Me</span>
+            </a>
+            <button class="mobile-cta discord-btn">
+                <i class="fab fa-discord"></i>
+                <span>Join Discord</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1>AI Roadshow</h1>
+            <p>BUILD-CREATE-SHOWCASE <br/> Agents, LLMs, and ML</p>
+            <p>See you at AI Roadshow!</p>
+            
+            <div class="hero-buttons">
+                <a href="https://discord.com/invite/hEMqtDXCHA" target="_blank" class="hero-button">
+                    <i class="fab fa-discord"></i>
+                    Discord
+                </a>
+                <a href="https://youtube.com/@aiwithtarun" target="_blank" class="hero-button">
+                    <i class="fab fa-youtube"></i>
+                    YouTube
+                </a>
+                <a href="#live-streams" class="hero-button">
+                    <i class="fas fa-globe"></i>
+                    Roadshows
+                </a>
+            </div>
+            
+            <p class="hero-footnote">da.. all the roadshows and streams are free to attend</p>
+        </div>
+        <div class="scroll-button" id="scroll-button">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Why Join Section -->
+    <section id="why-join" class="why-join">
+        <div class="section-header">
+            <h2>Why Join the Roadshow?</h2>
+            <p>What's in Store for You</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-image">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Live Case Study">
+                    <div class="feature-overlay"></div>
+                </div>
+                <div class="feature-content">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Live Case Study Building</h3>
+                    <p>Build real-world AI applications in live sessions with industry experts</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-image">
+                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b" alt="In-person Chat">
+                    <div class="feature-overlay"></div>
+                </div>
+                <div class="feature-content">
+                    <i class="fas fa-comments"></i>
+                    <h3>In-person Chit-Chat</h3>
+                    <p>Connect with fellow AI enthusiasts and share experiences in person</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-image">
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984" alt="Product Showcase">
+                    <div class="feature-overlay"></div>
+                </div>
+                <div class="feature-content">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Product Showcase</h3>
+                    <p>Demonstrate your AI projects, and observe innovative ideas to get inspired for your next big creation.
+                    </p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-image">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="Community Building">
+                    <div class="feature-overlay"></div>
+                </div>
+                <div class="feature-content">
+                    <i class="fas fa-users"></i>
+                    <h3>India Tour - AI Guide Campign</h3>
+                    <p>Join 101 guided campaigns where we combine 2-3 AI tools to create something out of it. Best creations wins swags</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Streams Section -->
+    <section id="live-streams" class="live-streams">
+        <div class="section-header">
+            <h2>Upcoming Live Streams</h2>
+            <p>Builders don't talk, we build</p>
+        </div>
+        <div class="streams-grid" id="streams-grid">
+            <!-- Cards will be inserted by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="sponsors" class="partners">
+        <div class="section-header">
+            <h2>Our Partners</h2>
+            <p>Join hands and support for the cause</p>
+        </div>
+        <div class="partners-container">
+            <div class="partners-grid" id="partners-grid">
+                <!-- Partner logos will be inserted by JavaScript -->
+            </div>
+            <div class="sponsor-cta">
+                <button class="sponsor-button">
+                    <i class="fas fa-handshake"></i>
+                    Sponsor Us
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Must Watch Videos -->
+    <section id="videos" class="must-watch">
+        <div class="section-header">
+            <h2>Must Watch Videos</h2>
+            <p>Pre-requisites needed for Live streams</p>
+        </div>
+        <div class="video-container">
+            <div class="video-scroll" id="video-scroll">
+                <!-- Video cards will be inserted by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about-us" class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="section-header mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 text-center">About Me</h2>
+                <p class="text-xl text-gray-600 text-center mt-2">Konichiwa! Jain Tarun desu.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto">
+                <!-- Image Carousel -->
+                <div class="relative h-[600px] rounded-2xl shadow-2xl overflow-hidden">
+                    <div class="carousel-container absolute inset-0">
+                        <!-- Main Slides -->
+                        <div class="carousel-slides flex transition-transform duration-500">
+                            <div class="carousel-slide min-w-full">
+                                <img src="me/1.jpg" alt="Tarun Speaking 1" class="w-full h-full object-cover">
+                            </div>
+                            <div class="carousel-slide min-w-full">
+                                <img src="me/2.jpg" alt="Tarun Speaking 2" class="w-full h-full object-cover">
+                            </div>
+                            <div class="carousel-slide min-w-full">
+                                <img src="me/3.jpg" alt="Tarun Speaking 3" class="w-full h-full object-cover">
+                            </div>
+                            <div class="carousel-slide min-w-full">
+                                <img src="me/4.jpg" alt="Tarun Speaking 4" class="w-full h-full object-cover">
+                            </div>
+                            <div class="carousel-slide min-w-full">
+                                <img src="me/5.jpg" alt="Tarun Speaking 5" class="w-full h-full object-cover">
+                            </div>
+                            <div class="carousel-slide min-w-full">
+                                <img src="me/6.jpg" alt="Tarun Speaking 6" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <!-- Navigation Arrows -->
+                        <button class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg z-10" onclick="prevSlide()">
+                            <i class="fas fa-chevron-left text-gray-800"></i>
+                        </button>
+                        <button class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg z-10" onclick="nextSlide()">
+                            <i class="fas fa-chevron-right text-gray-800"></i>
+                        </button>
+                        
+                        <!-- Slide Indicators -->
+                        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                            <div class="h-2 w-2 rounded-full bg-white/50 cursor-pointer slide-indicator"></div>
+                            <div class="h-2 w-2 rounded-full bg-white/50 cursor-pointer slide-indicator"></div>
+                            <div class="h-2 w-2 rounded-full bg-white/50 cursor-pointer slide-indicator"></div>
+                            <div class="h-2 w-2 rounded-full bg-white/50 cursor-pointer slide-indicator"></div>
+                            <div class="h-2 w-2 rounded-full bg-white/50 cursor-pointer slide-indicator"></div>
+                            <div class="h-2 w-2 rounded-full bg-white/50 cursor-pointer slide-indicator"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bio Content -->
+                <div class="space-y-8">
+                    <div class="prose max-w-none">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            I am Tarun Jain, currently working as a Data Scientist at AI Planet, a Belgium-based AI startup with over 2+ years experience. I was also part of Google Summer of Code 2024 at Red Hen Lab. I have been organizing workshops and AI/ML talks for over 2.5+ years as a Pie & AI Bangalore Ambassador at DeepLearningAI. This eventually led to the path of becoming a GDE in ML. I joined the Google Developer Experts program in October 2023. In my free time, I watch Anime and read Manga- One Piece being my favorite.
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Speaking Experience</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                                <i class="fas fa-globe text-blue-600 text-xl"></i>
+                                <div>
+                                    <span class="block text-2xl font-bold text-gray-900">6+</span>
+                                    <span class="text-sm text-gray-600">International Talks</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                                <i class="fas fa-code text-indigo-600 text-xl"></i>
+                                <div>
+                                    <span class="block text-2xl font-bold text-gray-900">3</span>
+                                    <span class="text-sm text-gray-600">PyCON Events</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                                <i class="fas fa-users text-purple-600 text-xl"></i>
+                                <div>
+                                    <span class="block text-2xl font-bold text-gray-900">7+</span>
+                                    <span class="text-sm text-gray-600">DevFest Talks</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm">
+                                <i class="fas fa-chalkboard-teacher text-green-600 text-xl"></i>
+                                <div>
+                                    <span class="block text-2xl font-bold text-gray-900">25+</span>
+                                    <span class="text-sm text-gray-600">Workshops</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- International Flags -->
+                    <div class="flex flex-wrap gap-3 mt-6">
+                        <img src="https://flagcdn.com/32x24/lk.png" alt="Sri Lanka" class="h-6 w-auto hover:scale-110 transition-transform">
+                        <img src="https://flagcdn.com/32x24/np.png" alt="Nepal" class="h-6 w-auto hover:scale-110 transition-transform">
+                        <img src="https://flagcdn.com/32x24/my.png" alt="Malaysia" class="h-6 w-auto hover:scale-110 transition-transform">
+                        <img src="https://flagcdn.com/32x24/id.png" alt="Indonesia" class="h-6 w-auto hover:scale-110 transition-transform">
+                        <img src="https://flagcdn.com/32x24/hk.png" alt="Hong Kong" class="h-6 w-auto hover:scale-110 transition-transform">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+<section id="testimonials" class="testimonials">
+    <div class="section-header">
+        <h2>What People Say</h2>
+        <p>Testimonials from the community</p>
+    </div>
+    <div class="testimonials-container">
+        <div class="testimonials-track">
+            <!-- First set of testimonials -->
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p class="testimonial-text">Tarun must be hiding something in those caps he wears because he's always so engaging and sharp during his talks! I've attended a few of his sessions, and he has a way of explaining trending AI concepts in such a clear and fun way that everyone can follow.</p>
+                <div class="testimonial-author">
+                    <h4>Chinab Chugh</h4>
+                    <p>CTO and Cofounder at Jublia</p>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p class="testimonial-text">On the topic 'The Era of LLM', Tarun R. Jain delivered an engaging and insightful talk during AI Day at IIIT Bhubaneswar. His unique ability to combine theoretical knowledge with practical applications kept the session both informative and enjoyable. His passion for AI was contagious, and his session leaving students eager to explore the limitless possibilities of AI.</p>
+                <div class="testimonial-author">
+                    <h4>Dr. Subrata Kumar Mohanty</h4>
+                    <p>Asst Prof at IIIT Bhubaneswar</p>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p class="testimonial-text">Tarun must be hiding something in those caps he wears because he's always so engaging and sharp during his talks! I've attended a few of his sessions, and he has a way of explaining trending AI concepts in such a clear and fun way that everyone can follow.</p>
+                <div class="testimonial-author">
+                    <h4>Chinab Chugh</h4>
+                    <p>CTO and Cofounder at Jublia</p>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p class="testimonial-text">At PyCon Malaysia 2024, Tarun led a workshop on building RAG pipelines with open-source LLMs. Key topics covered: data privacy, prompt engineering, hallucination reduction, cross-encoder re-ranking, and embedding fine-tuning. Participants gained hands-on experience building and deploying a Streamlit app using vector databases and embeddings.</p>
+                <div class="testimonial-author">
+                    <h4>Hafiz Adnan Hussain (PhD)</h4>
+                    <p>Full Stack Developer at Pineapple Development</p>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p class="testimonial-text">Tarun Jain's workshop significantly impacted our club's AI development through his expertise in model fine-tuning, vector databases, embeddings, and RAG implementation. His comprehensive knowledge of AI frameworks and emphasis on innovative problem-solving methodologies helped participants develop multiple solution approaches. His guidance on building Streamlit applications and integrating AI solutions with existing systems proved valuable. The team benefited from both theoretical understanding and practical implementation skills, making future collaborations desirable.</p>
+                <div class="testimonial-author">
+                    <h4>Dr. Vivek Venkobarao</h4>
+                    <p>AI and Electrification Developer at Vitesco Technologies, Stanford University Graduate School of Business</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2 class="footer-title">AI Roadshow</h2>
+                <p class="footer-subtitle">by AI with Tarun</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Content</h3>
+                    <ul>
+                        <li><a href="https://medium.com/@jaintarun7" target="_blank">Blogs</a></li>
+                        <li><a href="https://www.youtube.com/@AIwithTarun/streams" target="_blank">Live Streams</a></li>
+                        <li><a href="#">India Tour 101 - coming soon</a></li>
+                        <li><a href="#">Guide Github</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#">Sponsor Inquiry</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="mailto:jain.tarun7501@gmail.com">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="code-of-conduct.html">Code of Conduct</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="https://x.com/trj_0751" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://youtube.com/@aiwithtarun" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://instagram.com/aiwithtarun.ai" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/jaintarun75" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/lucifertrj" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Overlay for mobile menu -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

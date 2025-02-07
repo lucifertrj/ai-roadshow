@@ -1,14 +1,5 @@
 const liveStreams = [
     {
-        image: "streams/prompt.jpeg",
-        title: "COT-DSPY: Prompt Optimization",
-        date: "March 01, 2025",
-        time: "18:30 PM IST",
-        location: "Online",
-        status: "Registration Open",
-        link: "https://lu.ma/zkk8r0kp"
-    },
-    {
         image: "streams/education.jpeg",
         title: "AI in education: crewAI-101",
         date: "Feb 23, 2025",
@@ -24,7 +15,7 @@ const liveStreams = [
         time: "10:00 AM IST",
         location: "Cybercrime Investigation Training and Research, CID Karnataka.",
         status: "Closed",
-        link: "#"
+        link: "https://x.com/TRJ_0751/status/1883117303577157637"
     },
     {
         image: "streams/office.jpeg",
@@ -33,7 +24,7 @@ const liveStreams = [
         time: "3:00 PM IST",
         location: "Vitesco Technologies, Bangalore",
         status: "Closed",
-        link: "#"
+        link: "https://x.com/TRJ_0751/status/1884158222875123791"
     }
 ];
 

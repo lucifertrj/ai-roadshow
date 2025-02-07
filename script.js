@@ -1,7 +1,16 @@
 const liveStreams = [
     {
-        image: "streams/crew.png",
-        title: "crewAI-101: Education Case study project",
+        image: "streams/prompt.jpeg",
+        title: "COT-DSPY: Prompt Optimization",
+        date: "March 01, 2025",
+        time: "18:30 PM IST",
+        location: "Online",
+        status: "Registration Open",
+        link: "https://lu.ma/zkk8r0kp"
+    },
+    {
+        image: "streams/education.jpeg",
+        title: "AI in education: crewAI-101",
         date: "Feb 23, 2025",
         time: "18:30 PM IST",
         location: "Online",
@@ -9,20 +18,21 @@ const liveStreams = [
         link: "https://lu.ma/zkk8r0kp"
     },
     {
-        image: "streams/police.png",
+        image: "streams/police.jpeg",
         title: "Training program on AI for Police",
         date: "Jan 26, 2025",
         time: "10:00 AM IST",
-        location: "Centre for Cybercrime Investigation Training and Research, CID Karnataka.",
+        location: "Cybercrime Investigation Training and Research, CID Karnataka.",
         status: "Closed",
         link: "#"
     },
     {
-        image: "streams/corporate.png",
+        image: "streams/office.jpeg",
         title: "Corporate workshop on AI - Vitesco technologies",
         date: "Jan 28, 2025",
         time: "3:00 PM IST",
         location: "Vitesco Technologies, Bangalore",
+        status: "Closed",
         link: "#"
     }
 ];
@@ -250,14 +260,67 @@ function initCarousel() {
 document.addEventListener('DOMContentLoaded', function() {
     initCarousel();
 });
-// Pause testimonials scroll on hover
 const testimonialsTrack = document.querySelector('.testimonials-track');
+let startX;
+let scrollLeft;
+let isDown = false;
+
 if (testimonialsTrack) {
+    // Mouse Events
     testimonialsTrack.addEventListener('mouseenter', () => {
         testimonialsTrack.style.animationPlayState = 'paused';
     });
     
     testimonialsTrack.addEventListener('mouseleave', () => {
+        if (!isDown) {
+            testimonialsTrack.style.animationPlayState = 'running';
+        }
+    });
+
+    // Touch Events
+    testimonialsTrack.addEventListener('touchstart', (e) => {
+        isDown = true;
+        testimonialsTrack.style.animationPlayState = 'paused';
+        startX = e.touches[0].pageX - testimonialsTrack.offsetLeft;
+        scrollLeft = testimonialsTrack.scrollLeft;
+    });
+
+    testimonialsTrack.addEventListener('touchend', () => {
+        isDown = false;
         testimonialsTrack.style.animationPlayState = 'running';
+    });
+
+    testimonialsTrack.addEventListener('touchmove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.touches[0].pageX - testimonialsTrack.offsetLeft;
+        const walk = (x - startX) * 2; // Scroll speed multiplier
+        testimonialsTrack.scrollLeft = scrollLeft - walk;
+    });
+
+    // Mouse Drag Events
+    testimonialsTrack.addEventListener('mousedown', (e) => {
+        isDown = true;
+        testimonialsTrack.style.animationPlayState = 'paused';
+        startX = e.pageX - testimonialsTrack.offsetLeft;
+        scrollLeft = testimonialsTrack.scrollLeft;
+    });
+
+    testimonialsTrack.addEventListener('mouseleave', () => {
+        isDown = false;
+        testimonialsTrack.style.animationPlayState = 'running';
+    });
+
+    testimonialsTrack.addEventListener('mouseup', () => {
+        isDown = false;
+        testimonialsTrack.style.animationPlayState = 'running';
+    });
+
+    testimonialsTrack.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - testimonialsTrack.offsetLeft;
+        const walk = (x - startX) * 2;
+        testimonialsTrack.scrollLeft = scrollLeft - walk;
     });
 }
